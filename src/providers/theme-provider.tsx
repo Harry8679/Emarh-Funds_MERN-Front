@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ThemeProvider : React.FC = ({ children } : { children: React.ReactNode }) => {
+const ThemeProvider = ({ children } : { children: React.ReactNode }) => {
     return (
         <div>{children}</div>
     );
