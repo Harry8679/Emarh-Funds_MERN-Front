@@ -3,7 +3,24 @@ import React from 'react';
 
 const ThemeProvider = ({ children } : { children: React.ReactNode }) => {
     return (
-        <ConfigProvider>{children}</ConfigProvider>
+        <ConfigProvider
+            theme={{
+                token: {
+                    colorPrimary: '#283618'
+                },
+                components: {
+                    Button: {
+                        controlHeight: 35,
+                        borderRadius: 6,
+                    },
+                    Input : {
+                        controlHeight: 45,
+                        borderRadius: 2,
+                    }
+                }
+            }}>
+            {children}
+        </ConfigProvider>
     );
 }
 
