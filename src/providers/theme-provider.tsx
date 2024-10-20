@@ -6,7 +6,9 @@ const ThemeProvider = ({ children } : { children: React.ReactNode }) => {
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: '#283618'
+                    colorPrimary: '#283618',
+                    borderRadius: 2,
+                    controlOutline: 'none'
                 },
                 components: {
                     Button: {
