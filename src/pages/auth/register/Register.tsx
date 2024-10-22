@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const RegisterPage : React.FC = () => {
     return (
-        <div className='grid grid-cols-2 h-screen'>
-            <div className="welcome-content bg-primary flex justify-center items-center">
+        <div className='grid grid-cols-1 md:grid-cols-2 h-screen'>
+            <div className="welcome-content bg-primary md:flex justify-center items-center hidden">
                 <WelcomeContent />
             </div>
             <div className="form-content flex justify-center items-center">
