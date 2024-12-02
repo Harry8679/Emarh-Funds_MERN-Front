@@ -4,7 +4,7 @@ import { Button, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const RegisterPage : React.FC = () => {
+const RegisterPage : React.FC = async() => {
     const onSubmit = (value: {
         name: string;
         email: string;
