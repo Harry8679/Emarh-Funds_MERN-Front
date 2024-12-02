@@ -12,7 +12,7 @@ const RegisterPage : React.FC = () => {
     }) => {
         // console.log('Received values of form: ', value);
         try {
-            // await axio
+            await axios.post('/api.v1/users/register', value);
         } catch (err) {}
     }
     return (
