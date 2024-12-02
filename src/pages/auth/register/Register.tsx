@@ -9,7 +9,7 @@ const RegisterPage : React.FC = () => {
         email: string;
         password: string;
     }) => {
-        console.log('Received values of form: ', value);
+        // console.log('Received values of form: ', value);
     }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 h-screen'>
