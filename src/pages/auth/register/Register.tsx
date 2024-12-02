@@ -2,6 +2,7 @@ import React from 'react';
 import WelcomeContent from '../common/WelcomeContent';
 import { Button, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const RegisterPage : React.FC = () => {
     const onSubmit = (value: {
@@ -11,7 +12,7 @@ const RegisterPage : React.FC = () => {
     }) => {
         // console.log('Received values of form: ', value);
         try {
-            
+            // await axio
         } catch (err) {}
     }
     return (
