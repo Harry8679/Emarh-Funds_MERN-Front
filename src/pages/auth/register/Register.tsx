@@ -10,6 +10,9 @@ const RegisterPage : React.FC = () => {
         password: string;
     }) => {
         // console.log('Received values of form: ', value);
+        try {
+            
+        } catch (err) {}
     }
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 h-screen'>
