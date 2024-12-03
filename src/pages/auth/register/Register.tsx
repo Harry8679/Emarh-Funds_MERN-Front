@@ -4,7 +4,7 @@ import { Button, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-const RegisterPage : React.FC = async() => {
+const RegisterPage : React.FC = () => {
     const onSubmit = (value: {
         name: string;
         email: string;
@@ -12,7 +12,7 @@ const RegisterPage : React.FC = async() => {
     }) => {
         // console.log('Received values of form: ', value);
         try {
-            await axios.post('/api.v1/users/register', value);
+            // await axio
         } catch (err) {}
     }
     return (
