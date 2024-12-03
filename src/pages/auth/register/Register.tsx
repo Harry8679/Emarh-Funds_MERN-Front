@@ -5,16 +5,19 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const RegisterPage : React.FC = () => {
-    const onSubmit = (value: {
+    const onSubmit = async (value: {
         name: string;
         email: string;
         password: string;
     }) => {
-        // console.log('Received values of form: ', value);
         try {
-            // await axio
-        } catch (err) {}
-    }
+            const response = await axios.post('https://your-api-endpoint.com/register', value);
+            console.log('Registration successful', response.data);
+        } catch (error) {
+            console.error('Registration failed', error);
+        }
+    };
+    
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 h-screen'>
             <div className="welcome-content bg-primary md:flex justify-center items-center hidden">
