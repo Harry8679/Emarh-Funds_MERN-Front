@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WelcomeContent from '../common/WelcomeContent';
 import { Button, Form, Input, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
@@ -7,19 +7,22 @@ import { AxiosError } from 'axios';
 
 const RegisterPage : React.FC = () => {
     const navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
     const onSubmit = async (value: { name: string; email: string; password: string }) => {
         try {
+            setLoading(true); // Déclenche l'état de chargement
             await axios.post('/api/v1/users/register', value);
             message.success('Registration successful, please login to continue');
             navigate('/login');
         } catch (err: unknown) {
-            // Vérifie si l'erreur est une instance d'AxiosError
             if ((err as AxiosError).isAxiosError) {
                 const axiosError = err as AxiosError;
                 message.error(axiosError.response?.data?.message || 'An Axios error occurred');
             } else {
                 message.error('An unknown error occurred');
             }
+        } finally {
+            setLoading(false); // Réinitialise l'état de chargement
         }
     };
     
