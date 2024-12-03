@@ -47,7 +47,7 @@ const RegisterPage : React.FC = () => {
                         <Input placeholder='Password' />
                     </Form.Item>
 
-                    <Button type='primary' htmlType='submit'>Register</Button>
+                    <Button type='primary' htmlType='submit' loading={loading}>Register</Button>
 
                     <span className="text-sm">
                         Have an account ? <Link to='/login'>Login</Link>
